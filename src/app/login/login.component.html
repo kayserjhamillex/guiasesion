@@ -1,0 +1,23 @@
+<h3>Inicia sesion aqui</h3>
+<div *ngIf="!user">
+    <p>
+        <button (click)="signInWithGoogle()">
+            Google
+        </button>
+    </p>
+    <p>
+        <button>
+            Facebook
+        </button>
+    </p>
+</div>
+<div *ngIf="user">
+    <p>
+         Hola {{user.name}}
+        </p>
+    <p>
+        <button (click)="signOut()">
+            Cerrar sesion
+        </button>
+    </p>
+</div>

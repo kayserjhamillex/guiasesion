@@ -1,0 +1,19 @@
+<header>
+  <h1>
+    My Awesome Page
+  </h1>
+  <div>
+    <div>
+     <p *ngIf="!user">
+       <a routerLink="/login"> Iniciar Sesion</a>
+     </p>
+     <p *ngIf="user">
+      hola {{user.firstName}}
+     </p>
+     <a routerLink="/home"> home</a>
+     <a routerLink="/admin"> admin</a>
+    </div>
+  </div>
+</header>
+
+<router-outlet></router-outlet>
